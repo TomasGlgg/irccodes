@@ -8,8 +8,7 @@ bold(text)
 italic(text)
 strikethrough(text)
 underline(text)
-underline2(text)
-reverse(text)
+monospace(text)
 text + reset()
 ```
 

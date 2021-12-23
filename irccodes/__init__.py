@@ -27,12 +27,8 @@ def underline(text):
     return chr(constants.UNDERLINE) + text + chr(constants.UNDERLINE)
 
 
-def underline2(text):
-    return chr(constants.UNDERLINE2) + text + chr(constants.UNDERLINE2)
-
-
-def reverse(text):
-    return chr(constants.REVERSE) + text + chr(constants.REVERSE)
+def monospace(text):
+    return chr(constants.MONOSPACE) + text + chr(constants.MONOSPACE)
 
 
 def reset():
