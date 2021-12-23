@@ -23,10 +23,6 @@ def strikethrough(text):
     return chr(constants.STRIKETHROUGH) + text + chr(constants.STRIKETHROUGH)
 
 
-def reset(text):
-    return chr(constants.RESET) + text + chr(constants.RESET)
-
-
 def underline(text):
     return chr(constants.UNDERLINE) + text + chr(constants.UNDERLINE)
 
@@ -37,3 +33,7 @@ def underline2(text):
 
 def reverse(text):
     return chr(constants.REVERSE) + text + chr(constants.REVERSE)
+
+
+def reset():
+    return chr(constants.RESET)

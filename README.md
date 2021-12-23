@@ -7,10 +7,10 @@
 bold(text)
 italic(text)
 strikethrough(text)
-reset(text)
 underline(text)
 underline2(text)
 reverse(text)
+text + reset()
 ```
 
 ### Text colors:

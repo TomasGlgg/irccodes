@@ -3,7 +3,7 @@ from os.path import join, dirname
 
 setup(
     name='irccodes',
-    version='1.0',
+    version='1.0.1',
     author='Tomas Globis',
     description='',
     packages=find_packages(),
