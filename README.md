@@ -3,24 +3,41 @@
 ## Usage:
 
 ### Text format:
+
 ```python
-bold(text)
-italic(text)
-strikethrough(text)
-underline(text)
-monospace(text)
-text + reset()
+from irccodes import *
+
+# Functional method:
+bold(str)
+italic(str)
+strikethrough(str)
+underline(str)
+monospace(str)
+reset(str)
+
+# Concatenation method:
+symbols.BOLD + str
+symbols.ITALIC + str
+symbols.STRIKETHROUGH + str
+symbols.underline + str
+symbols.MONOSPACE + str
+symbols.RESET + str
 ```
 
 ### Text colors:
 ```python
-colored(text, text_color, background_color)
+colored(str, text_color, background_color)
+symbols.COLOR + symbols.<COLOR NAME> + ',' + symbols.<BACKGROUND COLOR NAME> + str
 ```
 
 Examples:
 ```python
 colored(text, 'blue')
 colored(text, 'light green', 'grey')
+bold(colored('first', 'white') + ' ' + colored('second', 'grey'))
+symbols.COLOR + symbols.BLUE + ',' + symbols.LIGHTRED + text
+text + symbols.RESET
+reset(text)
 ```
 
 Supported colors:

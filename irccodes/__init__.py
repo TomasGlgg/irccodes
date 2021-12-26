@@ -1,35 +1,35 @@
-import irccodes.constants
+from irccodes import symbols
 
 
 def colored(text, color, background_color=None):
-    text_color_code = str(getattr(constants, color.replace(' ', '').upper()))
+    text_color_code = getattr(symbols, color.replace(' ', '').upper())
     if background_color is not None:
-        background_color_code = ',' + str(getattr(constants, background_color.replace(' ', '').upper()))
+        background_color_code = ',' + getattr(symbols, background_color.replace(' ', '').upper())
     else:
         background_color_code = ''
-    color_code = chr(constants.COLOR) + text_color_code + background_color_code
-    return color_code + text + chr(constants.COLOR)
+    color_code = symbols.COLOR + text_color_code + background_color_code
+    return color_code + text + symbols.COLOR
 
 
 def bold(text):
-    return chr(constants.BOLD) + text + chr(constants.BOLD)
+    return symbols.BOLD + text + symbols.BOLD
 
 
 def italic(text):
-    return chr(constants.ITALIC) + text + chr(constants.ITALIC)
+    return symbols.ITALIC + text + symbols.ITALIC
 
 
 def strikethrough(text):
-    return chr(constants.STRIKETHROUGH) + text + chr(constants.STRIKETHROUGH)
+    return symbols.STRIKETHROUGH + text + symbols.STRIKETHROUGH
 
 
 def underline(text):
-    return chr(constants.UNDERLINE) + text + chr(constants.UNDERLINE)
+    return symbols.UNDERLINE + text + symbols.UNDERLINE
 
 
 def monospace(text):
-    return chr(constants.MONOSPACE) + text + chr(constants.MONOSPACE)
+    return symbols.MONOSPACE + text + symbols.MONOSPACE
 
 
-def reset():
-    return chr(constants.RESET)
+def reset(text):
+    return text + symbols.RESET
