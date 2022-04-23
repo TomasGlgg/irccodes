@@ -3,7 +3,7 @@ from os.path import join, dirname
 
 setup(
     name='irccodes',
-    version='1.1.1',
+    version='1.2.0',
     author='Tomas Globis',
     description='Python module for formatting text in IRC',
     packages=find_packages(),

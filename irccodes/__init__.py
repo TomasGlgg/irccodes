@@ -1,14 +1,14 @@
 from irccodes import symbols
 
 
-def colored(text, color, background_color=None):
+def colored(text, color, background_color=None, padding=' '):
     text_color_code = getattr(symbols, color.replace(' ', '').upper())
     if background_color is not None:
         background_color_code = ',' + getattr(symbols, background_color.replace(' ', '').upper())
     else:
         background_color_code = ''
     color_code = symbols.COLOR + text_color_code + background_color_code
-    return color_code + text + symbols.COLOR
+    return color_code + padding + text + symbols.COLOR
 
 
 def bold(text):
